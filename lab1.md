@@ -35,7 +35,7 @@
 
 # คำถามหลังการทดลอง
 * ปัจจุบันมีBoard,Platform,Framework อยู่เท่าไหร่
-  *ตอบ 998 Board,44 Platform,24 Frameworks
+ * ตอบ 998 Board,44 Platform,24 Frameworks
 
 
 
