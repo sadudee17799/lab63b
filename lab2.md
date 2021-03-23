@@ -22,7 +22,7 @@
  ![image](https://user-images.githubusercontent.com/80879678/112092578-62ab9a00-8bca-11eb-853f-540fc48be65c.jpg)
 * 5.เมื่อuploadครบ100%ใช้คำสั่ง pio device monitor
  ![image](https://user-images.githubusercontent.com/80879678/112092640-8242c280-8bca-11eb-8907-0a1be8c000f2.jpg)
- * ```javascript
+ *  ```javascript
   ; IOT for KIDS
 ;
 ; By Dr.Choompol Boonmee
