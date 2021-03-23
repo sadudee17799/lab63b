@@ -33,23 +33,21 @@
   ![image](https://user-images.githubusercontent.com/80879678/112149295-66aeda80-8c11-11eb-8cb9-fe93a27b7bff.jpg)
  * โค้ดที่ใช้ในการเขียนโปรแกรมคือ
   ```javascript
-  ; IOT for KIDS
-;
-; By Dr.Choompol Boonmee
-; 
+#include <Arduino.h>
 
-[env:exercise01]
-platform = espressif8266
-board = esp01_1m
-framework = arduino
-board_build.flash_mode = dout
+int cnt = 0;
 
-upload_port = /dev/cu.usbserial-1420
-;upload_port = COM3
+void setup()
+{
+	Serial.begin(115200);
+}
 
-monitor_port = /dev/cu.usbserial-1420
-;monitor_port = COM3
-monitor_speed = 115200
+void loop()
+{
+	cnt++;
+	Serial.printf("PATTANI :%d\n",cnt);
+	delay(1000);
+}
 ```
 
 # การบันทึกผลการทดลอง
