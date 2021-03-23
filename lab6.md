@@ -10,7 +10,7 @@
 
 # ศึกษาข้อมูลเบื้องต้น
 * platformio.ini
-* คลิป youtube อาจาร์ย
+* คลิป youtube อาจารย์ https://youtu.be/APdBR37Ukxg
 
 # วิธีการทำการทดลอง
 * 1.กำหนดชื่อและตั้งพาสเวิด
@@ -32,9 +32,55 @@
 * 7.เช็คว่าไวไฟที่สร้างขึ้นนั้นมีจริงมั้ยโดยใช้คำสั่งpio device monitor
  ![image](https://user-images.githubusercontent.com/80879678/112094298-9cca6b00-8bcd-11eb-84ab-2dc865285aca.jpg)
 * 8.ใช็โทรศัพท์มือถือค้นหาไวไฟ
+* โค้ดที่ใช้ในการเขียนโปรแกรมคือ
+```javascript
+#include <ESP8266WiFi.h>
+//#include <WiFiClient.h>
+#include <ESP8266WebServer.h>
+
+const char* ssid = "MY-ESP8266";
+const char* password = "choompol";
+
+IPAddress local_ip(192, 168, 1, 1);
+IPAddress gateway(192, 168, 1, 1);
+IPAddress subnet(255, 255, 255, 0);
+
+ESP8266WebServer server(80);
+
+int cnt = 0;
+
+void setup(void){
+	Serial.begin(115200);
+
+	WiFi.softAP(ssid, password);
+	WiFi.softAPConfig(local_ip, gateway, subnet);
+	delay(100);
+
+	server.onNotFound([]() {
+		server.send(404, "text/plain", "Path Not Found");
+	});
+
+	server.on("/", []() {
+		cnt++;
+		String msg = "Hello cnt: ";
+		msg += cnt;
+		server.send(200, "text/plain", msg);
+	});
+
+	server.begin();
+	Serial.println("HTTP server started");
+}
+
+void loop(void){
+  server.handleClient();
+}
+```
 
 # การบันทึกผลการทดลอง
 สามารถสร้างไวไฟแอคเซสพอยต์ขึ้นมาเองได้ โดยทดลองค้นหาด้วยโทรศัพท์แล้วว่ามีจริง
-![image](https://user-images.githubusercontent.com/80879678/112094339-ad7ae100-8bcd-11eb-98da-a0eb09f63ef6.jpg)
+![image](https://user-images.githubusercontent.com/80879678/112094339-ad7ae100-8bcd-11eb-98da-a0eb09f63ef6.jpg) 
+
 # อภิปรายผลการทดลอง
+
 # คำถามหลังการทดลอง
+ 
