@@ -31,6 +31,24 @@
  ![image](https://user-images.githubusercontent.com/80879678/112149241-572f9180-8c11-11eb-95e8-2c0c878792fb.jpg)
 * 7.ใช้คำสั่งpio device monitor เพื่อดูผลลัพท์
   ![image](https://user-images.githubusercontent.com/80879678/112149295-66aeda80-8c11-11eb-8cb9-fe93a27b7bff.jpg)
+ * โค้ดที่ใช้ในการเขียนโปรแกรมคือ
+  ; IOT for KIDS
+;
+; By Dr.Choompol Boonmee
+; 
+
+[env:exercise01]
+platform = espressif8266
+board = esp01_1m
+framework = arduino
+board_build.flash_mode = dout
+
+upload_port = /dev/cu.usbserial-1420
+;upload_port = COM3
+
+monitor_port = /dev/cu.usbserial-1420
+;monitor_port = COM3
+monitor_speed = 115200
 
 # การบันทึกผลการทดลอง
 * ทราบว่าเป็น platform ของ espressif8266
