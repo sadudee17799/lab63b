@@ -17,7 +17,7 @@
  ![image](https://user-images.githubusercontent.com/80879678/112093962-ea92a380-8bcc-11eb-8b5d-9c367a3b9449.jpg)
 
 * 2.กำหนดIPAdress,gateway,subnet
- ![image](https://user-images.githubusercontent.com/80879678/112094045-19107e80-8bcd-11eb-87a4-81398dc3a70c.jpg)
+![image](https://user-images.githubusercontent.com/80879678/112094552-13676880-8bce-11eb-840f-558fcd636b35.jpg)
 
 * 3.เตรียมเว็บเซิฟเวอร์1ตัว
  ![image](https://user-images.githubusercontent.com/80879678/112094082-32192f80-8bcd-11eb-9905-b37362433e7a.jpg)
