@@ -24,23 +24,39 @@
  ![image](https://user-images.githubusercontent.com/80879678/112092640-8242c280-8bca-11eb-8907-0a1be8c000f2.jpg)
  * โค้ดที่ใช้ในการเขียนโปรแกรม
  ```javascript   
-  ; IOT for KIDS
-;
-; By Dr.Choompol Boonmee
-; 
+#include <Arduino.h>
+#include <ESP8266WiFi.h>
 
-[env:exercise01]
-platform = espressif8266
-board = esp01_1m
-framework = arduino
-board_build.flash_mode = dout
+int cnt = 0;
 
-upload_port = /dev/cu.usbserial-1420
-;upload_port = COM3
+void setup()
+{
+	Serial.begin(115200);
+	WiFi.mode(WIFI_STA);
+	WiFi.disconnect();
+	delay(100);
+	Serial.println("\n\n\n");
+}
 
-monitor_port = /dev/cu.usbserial-1420
-;monitor_port = COM3
-monitor_speed = 115200
+void loop()
+{
+	Serial.println("========== เริ่มต้นแสกนหา Wifi ===========");
+	int n = WiFi.scanNetworks();
+	if(n == 0) {
+		Serial.println("NO NETWORK FOUND");
+	} else {
+		for(int i=0; i<n; i++) {
+			Serial.print(i + 1);
+			Serial.print(": ");
+			Serial.print(WiFi.SSID(i));
+			Serial.print(" (");
+			Serial.print(WiFi.RSSI(i));
+			Serial.println(")");
+			delay(10);
+		}
+	}
+	Serial.println("\n\n");
+}
 ```
   
 
