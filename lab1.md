@@ -32,6 +32,7 @@
 * 7.ใช้คำสั่งpio device monitor เพื่อดูผลลัพท์
   ![image](https://user-images.githubusercontent.com/80879678/112149295-66aeda80-8c11-11eb-8cb9-fe93a27b7bff.jpg)
  * โค้ดที่ใช้ในการเขียนโปรแกรมคือ
+  ```javascript
   ; IOT for KIDS
 ;
 ; By Dr.Choompol Boonmee
@@ -49,6 +50,7 @@ upload_port = /dev/cu.usbserial-1420
 monitor_port = /dev/cu.usbserial-1420
 ;monitor_port = COM3
 monitor_speed = 115200
+```
 
 # การบันทึกผลการทดลอง
 * ทราบว่าเป็น platform ของ espressif8266
