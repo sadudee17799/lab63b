@@ -18,7 +18,7 @@
   1. เข้าโปรแกรมไปที่ cd_05wifi-web-server และอธิบายโปรแกรมออกมา จะได้ดังนี้
   
   
-javascript
+```javascript
   #include <ESP8266WiFi.h>
 //#include <WiFiClient.h>
 #include <ESP8266WebServer.h>
@@ -60,6 +60,7 @@ void setup(void){
 void loop(void){
   server.handleClient();
 }
+```
 
 2. ทั้งสองส่วนนี้คือส่วนที่ต้องใส่ wifi ที่ต้องการเชื่อม
   const char* ssid = "HI_BMFWIFI_2.4G";
