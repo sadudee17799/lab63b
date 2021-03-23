@@ -34,23 +34,30 @@
  ![image](https://user-images.githubusercontent.com/80879678/112157082-6c102300-8c19-11eb-8eae-e7906c577dfb.jpg)
 * โค้ดที่ใช้ในการเขียนโปรแกรม
  ```javascript
- ; IOT for KIDS
-;
-; By Dr.Choompol Boonmee
-; 
+#include <Arduino.h>
+#include <ESP8266WiFi.h>
 
-[env:exercise01]
-platform = espressif8266
-board = esp01_1m
-framework = arduino
-board_build.flash_mode = dout
+int cnt = 0;
 
-upload_port = /dev/cu.usbserial-1420
-;upload_port = COM3
+void setup()
+{
+	Serial.begin(115200);
+	pinMode(0, OUTPUT);
+	Serial.println("\n\n\n");
+}
 
-monitor_port = /dev/cu.usbserial-1420
-;monitor_port = COM3
-monitor_speed = 115200
+void loop()
+{
+	cnt++;
+	if(cnt % 2) {
+		Serial.println("========== ON ===========");
+		digitalWrite(0, HIGH);
+	} else {
+		Serial.println("========== OFF ===========");
+		digitalWrite(0, LOW);
+	}
+	delay(500);
+}
 ```
 # การบันทึกผลการทดลอง
 ทุกๆครึ่งวินาทีจะเป็นon/off
