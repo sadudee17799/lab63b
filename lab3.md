@@ -26,12 +26,12 @@
  ![image](https://user-images.githubusercontent.com/80879678/112155404-daec7c80-8c17-11eb-8cd7-b36f0462bb6b.jpg)
 * 5.เพื่อให้โปรแกรมถูกโหลดกดปุ่มอัปโหลด
 * 6.กดปุ่มรีเซ็ต
- 
-* 7.ดูผลลัพท์การรันโดยเขียน pio device monitor
+ * 7.ดูผลลัพท์การรันโดยเขียน pio device monitor
  ![image](https://user-images.githubusercontent.com/80879678/112155485-edff4c80-8c17-11eb-9a36-fa88113ce316.jpg)
 * 8.นำไมโครคอนโทรลเลอร์ที่เขียนโปรแกรมไว้แล้ว มาใช้เพื่อควบคุมrelayเพื่อเปิด/ปิดสวิทซ์
- 
+ ![image](https://user-images.githubusercontent.com/80879678/112156989-5a2e8000-8c19-11eb-8857-caf1f8547aa4.jpg)
 * 9.ต่อเข้ากับขั้วชาร์ต
+ ![image](https://user-images.githubusercontent.com/80879678/112157082-6c102300-8c19-11eb-8eae-e7906c577dfb.jpg)
 * โค้ดที่ใช้ในการเขียนโปรแกรม
  ```javascript
  ; IOT for KIDS
@@ -57,5 +57,12 @@ monitor_speed = 115200
 พอร์ตที่ต่อเส้นสีขาวจะเปล่งแสงตอนที่on
 ![image](https://user-images.githubusercontent.com/80879678/112155642-1424ec80-8c18-11eb-999a-79c9768e7b1b.jpg)
 เมื่อต่อrelay จะควบคุมrelayให้เปิด/ปิดโดยจะได้ยินเสียง
+![image](https://user-images.githubusercontent.com/80879678/112157082-6c102300-8c19-11eb-8eae-e7906c577dfb.jpg)
+
 # อิปรายผลการทดลอง
+* จากการทดลองก่อนที่จะต่อrelayสัญญาณจะเป็นon/offสลับกันไปทุกๆครึ่งวินาทีและเมื่อเป็นon LEDจะเปล่งแสง
+* Relay จะไปควบคุมการเปิดปิดสวิทซ์
+
 # คำถามหลังการทดลอง
+* เราสามารถทำให้ไฟกระพริบเร็วขึ้นหรือช้าลงได้หรือไม่
+* ตอบ ได้โดยการไปเขียนโค้ดใหม่ เลือกเวลาวนลูปที่เร็วขึ้นหรือช้าลงนั่นเอง
