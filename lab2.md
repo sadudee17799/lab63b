@@ -22,6 +22,26 @@
  ![image](https://user-images.githubusercontent.com/80879678/112092578-62ab9a00-8bca-11eb-853f-540fc48be65c.jpg)
 * 5.เมื่อuploadครบ100%ใช้คำสั่ง pio device monitor
  ![image](https://user-images.githubusercontent.com/80879678/112092640-8242c280-8bca-11eb-8907-0a1be8c000f2.jpg)
+ * ```javascript
+  ; IOT for KIDS
+;
+; By Dr.Choompol Boonmee
+; 
+
+[env:exercise01]
+platform = espressif8266
+board = esp01_1m
+framework = arduino
+board_build.flash_mode = dout
+
+upload_port = /dev/cu.usbserial-1420
+;upload_port = COM3
+
+monitor_port = /dev/cu.usbserial-1420
+;monitor_port = COM3
+monitor_speed = 115200
+```
+  
 
 # การบันทึกผล
 เมื่ออัปโหลดเสร็จจะมีส่วนset upที่เซ็ตไวไฟให้พร้อมทำงานส่วนลูปคือวนลูปตลอดไป
