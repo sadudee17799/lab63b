@@ -24,7 +24,7 @@
 * 3.นำโปรแกรมไปอัปโหลดโดยใช้คำสั่งpio run -t upload
 ![image](https://user-images.githubusercontent.com/80879678/112167081-c661b180-8c22-11eb-8acc-2b0ab05803db.jpg) 
 * 4.กดปุ่มอัปโหลด จะขึ้นread1 (จะเช็คที่พอร์ต0ว่ามีอินพุทมาหรือไม่ ถ้าเป็น1ไฟติด ถ้าเป็น0ไฟดับ)
- ![image](https://user-images.githubusercontent.com/80879678/112167180-d5e0fa80-8c22-11eb-8241-d6d71b8da2a7.jpg
+*  ![image](https://user-images.githubusercontent.com/80879678/112167180-d5e0fa80-8c22-11eb-8241-d6d71b8da2a7.jpg)
 * 5.นำสายไฟเส้นสีขาว(พอร์ต0)จิ้มไปที่0โวลต์ที่เส้นสีดำเอ้าพุทread0ไฟติด
  ![image](https://user-images.githubusercontent.com/80879678/112167286-ea24f780-8c22-11eb-8915-82df41b39a43.jpg)
 * 6.นำไปต่อกับcensorแสง ขานึงต่อกับสีแดงอีกขาต่อกับสีดำ(ground)
